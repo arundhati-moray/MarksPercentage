@@ -22,6 +22,8 @@ class MarksPercentage
         student1.CalculatePercentage();
         Console.WriteLine($"Percentage of Student2 is : {student2.Percentage}");
 
+        // git practice
+
 
     }
 }
