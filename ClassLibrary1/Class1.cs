@@ -8,11 +8,38 @@ namespace ClassLibrary1
 {
     public class StudentMarks
     {
-        public double Maths;
-        public double Science;
-        public double ComputerScience;
-        public double Percentage;
+        private double Maths;
+        private double Science;
+        private double ComputerScience;
+        private double Percentage;
 
+        public void SetMaths(int value)
+        {
+            Maths = value;
+        }
+
+        public void SetScience(int value)
+        {
+            Science = value;
+        }
+
+        public void SetComputerScience(int value)
+        {
+            ComputerScience = value;
+        }
+
+        public int GetMaths()
+        {
+            return Maths;
+        }
+        public int GetScience()
+        {
+            return Science;
+        }
+        public int GetComputerScience()
+        {
+            return ComputerScience;
+        }
 
         public void CalculatePercentage()
         {
