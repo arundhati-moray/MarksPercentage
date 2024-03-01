@@ -4,6 +4,7 @@ class MarksPercentage
 {
     static void Main()
     {
+        double TotalMarks;
         StudentMarks student1 = new StudentMarks();
         StudentMarks student2 = new StudentMarks();
 
@@ -17,11 +18,13 @@ class MarksPercentage
         student2.SetComputerScience(100);
 
         student1.CalculatePercentage();
-        Console.WriteLine($"Percentage of Student1 is : {student1.Percentage}");
+        Console.WriteLine($"Percentage of Student1 is : {student1.GetPercentage()}");
 
         student2.CalculatePercentage();
-        Console.WriteLine($"Percentage of Student2 is : {student2.Percentage}");
+        Console.WriteLine($"Percentage of Student2 is : {student2.GetPercentage()}");
 
+        TotalMarks =  StudentMarks.GetTotalMarks(student1 , student2);
+        Console.WriteLine($"Total Marks of all the Students is: {TotalMarks}");
 
 
     }
