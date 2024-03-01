@@ -13,38 +13,49 @@ namespace ClassLibrary1
         private double ComputerScience;
         private double Percentage;
 
-        public void SetMaths(int value)
+        public void SetMaths(int Maths)
         {
-            Maths = value;
+            this.Maths = Maths;
         }
 
-        public void SetScience(int value)
+        public void SetScience(int Science)
         {
-            Science = value;
+            this.Science = Science;
         }
 
-        public void SetComputerScience(int value)
+        public void SetComputerScience(int ComputerScience)
         {
-            ComputerScience = value;
+            this.ComputerScience = ComputerScience;
         }
 
-        public int GetMaths()
+        public double GetMaths()
         {
             return Maths;
         }
-        public int GetScience()
+        public double GetScience()
         {
             return Science;
         }
-        public int GetComputerScience()
+        public double GetComputerScience()
         {
             return ComputerScience;
         }
 
+        public double GetPercentage()
+        {
+            return Percentage;
+        }
         public void CalculatePercentage()
         {
             double P = (((Maths + ComputerScience + Science) * 100) / 300);
             Percentage = P;
+        }
+
+        public static double GetTotalMarks(StudentMarks student1, StudentMarks student2)
+        {
+            double totalMarks;
+            totalMarks = student1.GetMaths() + student2.GetMaths() + student1.GetComputerScience() + student2.GetComputerScience() + student1.GetScience() + student2.GetScience();
+            return totalMarks;
         }
 
 
