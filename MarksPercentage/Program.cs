@@ -23,8 +23,13 @@ class MarksPercentage
         student2.CalculatePercentage();
         Console.WriteLine($"Percentage of Student2 is : {student2.GetPercentage()}");
 
+        // Total marks of student1 and student2
         TotalMarks =  StudentMarks.GetTotalMarks(student1 , student2);
         Console.WriteLine($"Total Marks of all the Students is: {TotalMarks}");
+
+        // displaying the additional subjects of student1 & student 2 using params parameter modifier
+        student1.DisplayAdditionalSubjects("Biology","Civics","Geography","Physics","Chemistry");
+        student2.DisplayAdditionalSubjects("Biology","Civics","Geography","Physics","Chemistry");
 
 
     }

@@ -58,5 +58,16 @@ namespace ClassLibrary1
             return totalMarks;
         }
 
+        //DisplayAllSubjects Method that uses params Parameter modifier
+        public void DisplayAdditionalSubjects(params string[] Subjects)
+        {
+            Console.WriteLine($"The subject is: {Subjects[0]}");
+            Console.WriteLine($"The subject is: {Subjects[1]}");
+            Console.WriteLine($"The subject is: {Subjects[2]}");
+            Console.WriteLine($"The subject is: {Subjects[3]}");
+            Console.WriteLine($"The subject is: {Subjects[4]}");
+        }
+
+
     }
 }
