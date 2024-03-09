@@ -5,23 +5,27 @@ class MarksPercentage
     static void Main()
     {
         double TotalMarks;
-        StudentMarks student1 = new StudentMarks();
-        StudentMarks student2 = new StudentMarks();
+        StudentMarks student1 = new StudentMarks
+        {
+            Maths = 96,
+            Science = 100,
+            ComputerScience = 88
+        };
+        StudentMarks student2 = new StudentMarks
+        {
+            Maths = 96,
+            Science = 80,
+            ComputerScience = 88
+        };
 
-        //initialization
-        student1.SetMaths(95);
-        student1.SetScience(98);
-        student1.SetComputerScience(100);
-
-        student2.SetMaths(96);
-        student2.SetScience(99);
-        student2.SetComputerScience(100);
 
         student1.CalculatePercentage();
-        Console.WriteLine($"Percentage of Student1 is : {student1.GetPercentage()}");
+        Console.WriteLine($"Percentage of Student1 is : {student1.Percentage}");
 
         student2.CalculatePercentage();
-        Console.WriteLine($"Percentage of Student2 is : {student2.GetPercentage()}");
+        Console.WriteLine($"Percentage of Student2 is : {student2.Percentage}");
+       
+
 
         // Total marks of student1 and student2
         TotalMarks =  StudentMarks.GetTotalMarks(student1 , student2);

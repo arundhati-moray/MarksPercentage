@@ -8,43 +8,26 @@ namespace ClassLibrary1
 {
     public class StudentMarks
     {
-        private double Maths;
-        private double Science;
-        private double ComputerScience;
-        private double Percentage;
+      //  private double Maths;
+       // private double Science;
+       // private double ComputerScience;
+        //private double Percentage;
 
-        public void SetMaths(int Maths)
-        {
-            this.Maths = Maths;
-        }
+        /*   public void SetMaths(int Maths)
+           {
+               this.Maths = Maths;
+           } */
 
-        public void SetScience(int Science)
-        {
-            this.Science = Science;
-        }
+        public int Maths { get; set; }
+        public int Science { get; set; }
+        public int ComputerScience { get; set; }
+        public double Percentage {  get; set; }
 
-        public void SetComputerScience(int ComputerScience)
-        {
-            this.ComputerScience = ComputerScience;
-        }
-
-        public double GetMaths()
+    /*    public double GetMaths()
         {
             return Maths;
-        }
-        public double GetScience()
-        {
-            return Science;
-        }
-        public double GetComputerScience()
-        {
-            return ComputerScience;
-        }
-
-        public double GetPercentage()
-        {
-            return Percentage;
-        }
+        } */
+       
         public void CalculatePercentage()
         {
             double P = (((Maths + ComputerScience + Science) * 100) / 300);
@@ -54,18 +37,17 @@ namespace ClassLibrary1
         public static double GetTotalMarks(StudentMarks student1, StudentMarks student2)
         {
             double totalMarks;
-            totalMarks = student1.GetMaths() + student2.GetMaths() + student1.GetComputerScience() + student2.GetComputerScience() + student1.GetScience() + student2.GetScience();
+            totalMarks = student1.Maths + student2.Maths + student1.ComputerScience + student2.ComputerScience + student1.Science + student2.Science;
             return totalMarks;
         }
 
         //DisplayAllSubjects Method that uses params Parameter modifier
         public void DisplayAdditionalSubjects(params string[] Subjects)
         {
-            Console.WriteLine($"The subject is: {Subjects[0]}");
-            Console.WriteLine($"The subject is: {Subjects[1]}");
-            Console.WriteLine($"The subject is: {Subjects[2]}");
-            Console.WriteLine($"The subject is: {Subjects[3]}");
-            Console.WriteLine($"The subject is: {Subjects[4]}");
+            for(int i = 0 ; i < Subjects.Length ; i++)
+            {
+                Console.WriteLine($"The subject is: {Subjects[i]}");
+            }
         }
 
 
